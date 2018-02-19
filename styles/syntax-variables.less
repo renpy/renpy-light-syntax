@@ -3,29 +3,42 @@
 // This defines all syntax variables that syntax themes must implement when they
 // include a syntax-variables.less file.
 
-// General colors
-@syntax-text-color: @very-light-gray;
-@syntax-cursor-color: white;
-@syntax-selection-color: lighten(@dark-gray, 10%);
-@syntax-background-color: @very-dark-gray;
+@syntax-text-color: #222;
+@syntax-cursor-color: black;
+@syntax-selection-color: #afc4da;
+@syntax-selection-flash-color: #69c;
+@syntax-background-color: white;
 
 // Guide colors
-@syntax-wrap-guide-color: @dark-gray;
-@syntax-indent-guide-color: @gray;
-@syntax-invisible-character-color: @gray;
+@syntax-wrap-guide-color: rgba(85, 85, 85, .2);
+@syntax-indent-guide-color: rgba(85, 85, 85, .2);
+@syntax-invisible-character-color: rgba(85, 85, 85, .2);
 
 // For find and replace markers
-@syntax-result-marker-color: @light-gray;
-@syntax-result-marker-color-selected: white;
+@syntax-result-marker-color: #999;
+@syntax-result-marker-color-selected: black;
 
 // Gutter colors
-@syntax-gutter-text-color: @very-light-gray;
+@syntax-gutter-text-color: @syntax-text-color;
 @syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-@syntax-gutter-background-color: @dark-gray;
-@syntax-gutter-background-color-selected: @gray;
+@syntax-gutter-background-color: white;
+@syntax-gutter-background-color-selected: rgba(255, 255, 134, 0.34);
 
 // For git diff info. i.e. in the gutter
-@syntax-color-renamed: @blue;
-@syntax-color-added: @green;
-@syntax-color-modified: @orange;
-@syntax-color-removed: @red;
+@syntax-color-renamed: #96CBFE;
+@syntax-color-added: #718C00;
+@syntax-color-modified: #ff982d;
+@syntax-color-removed: #D14;
+
+@syntax-color-variable: @syntax-text-color;
+@syntax-color-constant: @syntax-text-color;
+@syntax-color-property: @property-blue;
+@syntax-color-value: @syntax-color-constant;
+@syntax-color-function: @name-yellow;
+@syntax-color-method: @syntax-color-function;
+@syntax-color-class: @name-yellow;
+@syntax-color-keyword: @keyword-gold;
+@syntax-color-tag: @name-yellow;
+@syntax-color-attribute: @syntax-text-color;
+@syntax-color-import: @syntax-color-keyword;
+@syntax-color-snippet: @syntax-color-constant;
